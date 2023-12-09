@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "python-ml-image-searcher"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = {version = "^2.1.0+cpu", source = "torch-source"}
+transformers = "^4.34.1"
+torchvision = {version = "^0.16.0+cpu", source = "torch-source"}
+timm = "^0.9.8"
+sentence-transformers = "^2.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.0.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[[tool.poetry.source]]
+name = "torch-source"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[tool.pyright]
+reportUnknownVariableType = false
+reportUnknownMemberType = false
+reportMissingTypeStubs = false
+reportUnknownArgumentType = false
